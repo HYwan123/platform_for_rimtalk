@@ -1,0 +1,27 @@
+{
+    "id": "chatcmpl-69318aaf3c2a3ac19f216588",
+    "choices": [
+        {
+            "delta": {
+                "content": "顶",
+                "function_call": null,
+                "refusal": null,
+                "role": null,
+                "tool_calls": null
+            },
+            "finish_reason": null,
+            "index": 0,
+            "logprobs": null
+        }
+    ],
+    "created": 1764854447,
+    "model": "kimi-k2",
+    "object": "chat.completion.chunk",
+    "service_tier": null,
+    "system_fingerprint": "fpv0_8318f5a4",
+    "usage": null,
+    "extend_fields": {
+        "traceId": "2133ebf417648544467157337e10a7",
+        "requestId": "31df4aaad5074788e6b39ffbbaa45c67"
+    }
+}
