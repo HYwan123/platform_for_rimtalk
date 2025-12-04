@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import StreamingResponse, JSONResponse
-from pydantic import BaseModel, Field
 from app.utils.openai_client import OpenaiClient
 import uvicorn
 from app.model.chat import *
@@ -26,7 +25,12 @@ async def chat_completions(request: ChatRequest):
         stream = await conn.chat.completions.create(
             model=request.model,
             messages=messages_param, # type: ignore
-            stream=True
+            stream=True,
+            response_format=
+            {
+                "type": "json_schema",
+                "schema": OutputMessage.model_json_schema()
+            } # type: ignore
         ) # type: ignore
         async for chunk in stream:
             json_str = chunk.model_dump_json()
