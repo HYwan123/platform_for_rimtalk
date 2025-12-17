@@ -9,7 +9,7 @@ from app.utils.to_chunk import *
 # --- 3. FastAPI 应用和路由 ---
 app = FastAPI(title="Ollama/OpenAI API Emulator")
 
-# 实例化客户端（单例）
+# 实例化客户端（单例） 
 openai_client = OpenaiClient()
 
 
